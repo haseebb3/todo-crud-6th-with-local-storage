@@ -22,7 +22,9 @@ const todoContainer = document.getElementById("todoContainer");
 
 // localStorage.setItem("allTodos", JSON.stringify(defaultTodos));
 let todosArray = JSON.parse(localStorage.getItem("allTodos")) || [];
-
+ if(todosArray.length === 0){
+    todoContainer.classList.remove("d-none");
+  }
 //read
 function renderTodos(arr) {
   let res = ``;
