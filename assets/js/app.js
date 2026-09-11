@@ -128,10 +128,12 @@ function onTodoDeleteHandler(ele) {
       icon: "success",
       timer: 2500,
     });
-  }
-  if(todosArray.length === 0){
+
+    if(todosArray.length === 0){
     todoContainer.classList.remove("d-none");
   }
+  }
+  
 }
 
 form.addEventListener("submit", onFormSubmitHandler);
